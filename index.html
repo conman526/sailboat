@@ -6,40 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>S/V Juniper</title>
 </head>
 <body>
     <div class="header">
-        <h1 class="head-name">S/V Juniper</h1>
+        <div class="jun-back"><h1 class="head-name">Juniper</h1></div>
         <ul class="head-ul">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./pages/about.html">About</a></li>
+            <li><a href="./pages/gallery.html">Gallery</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
         </ul>
     </div>
     <div class="first-row">
-        <div>
+        <div class="dream">
             <h2>The Sailing Dream</h2>
-            <p>Ever since Connor was a child he dreamed of sailing the world.</p>
-            <button type="button">Donate</button>
+            <p>Ever since Connor was a child he dreamed of sailing the world. Today, he is able to start that dream with your help.</p>
+            <button type="button" href="#">Donate Today!</button>
         </div>
-        <div>
-            <img>
+        <div class="cover-photo">
+            <img src="./Images/Juniper-cover.jpg" alt="Juniper, a sailboat" id="juniper-photo">
         </div>
     </div>
     <div class="second-row">
-        <div><h3>Filler</h3></div>
-        <div>
-            <img>
-            <p>Image subtext</p>
-            <img>
-            <p>Image subtext</p>
-            <img>
-            <p>Image subtext</p>
-            <img>
-            <p>Image subtext</p>
+        <div id="adventure"><h3>A Taste of the Adventure</h3></div>
+        <div class="image-row">
+            <div class="image-block">
+                <div><img src="./Images/Connor-happy.jpg" alt="A happy skipper." id="connor-happy"></div>
+                <p>Connor Sauby, the skipper, with a huge smile while under sail.</p>
+            </div>
+            <div class="image-block">
+                <div><img src="./Images/mr-skeen.jpg" alt="Mr. Skeen joined us." id="mr-skeen"></div>
+                <p>Mr. Skeen, Morgen, and Ashley came down to sail on Juniper. Mr. Skeen taught me how to sail.</p>
+            </div>
+            <div class="image-block">
+                <div><img src="./Images/friends.jpg" alt="Juniper with some friends." id="friends"></div>
+                <p>Juniper loves to have friends on board, even if they don't know how to sail!</p>
+            </div>
+            <div class="image-block">
+                <div><img src="./Images/on-the-move.jpg" alt="Juniper under sail." id="on-the-move"></div>
+                <p>Juniper under sail with the 150% genoa and a full main.</p>
+            </div>
         </div>
     </div>
     <div class="third-row">
