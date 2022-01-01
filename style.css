@@ -2,13 +2,19 @@ body {
     background-color: #1F2937;
     font-family: 'Roboto', sans-serif;
     color: #F9FAF8;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+}
+
+.photo {
+    background-image: url(./Images/Juniper-cover.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    max-height: 100vh;
+    background-size: cover;
+    flex-shrink: 1;
+    flex-basis: content;
 }
 
 .header {
@@ -17,6 +23,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 0px 50px 0px;
+    padding: 25px 100px 50px 100px;
+    flex-wrap: wrap;
 }
 
 ul {
@@ -24,7 +33,7 @@ ul {
     padding: 0;
 }
 li {
-    margin: 20px 0px 20px 20px;
+    margin: 20px 20px 20px 20px;
     list-style: none;
 }
 a:link {
@@ -69,6 +78,8 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .first-row {
@@ -76,18 +87,24 @@ a:active {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 200px 100px 300px 100px;
+    
 }
 
 .dream {
-    padding: 25px 25px 25px 0;
+    padding: 0;
     flex-shrink: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 25px;
+    background-color: rgba(31, 41, 55, 0.8);
+    border-radius: 15px;
 }
 
 .dream h2 {
     margin: 0px;
+    text-align: center;
 }
 .dream p {
     margin: 10px;
@@ -98,13 +115,21 @@ a:active {
     padding-bottom: 1px;
     min-width: 75px;
     min-height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
+    padding: 5px 10px;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: 2px solid #F9FAF8;
+    border-radius: 5px;
+    transition: 0.3s;
 }
+
+.dream button:hover {
+    background-color: #F9FAF8;
+    color: #3882F6;
+    }
 
 .cover-photo {
     display: flex;
@@ -126,23 +151,33 @@ a:active {
     background-color: #F9FAF8;
     color: #1F2937;
     box-shadow: 2px 2px 8px #0a1301;
+    margin: 0px;
+    background: linear-gradient(180deg, #b2d8de 0%, #f9faf8 50%, #b2d8de 100%);
 }
-#adventure {
+
+.adventure h3 {
+    margin: 25px;
+    text-align: center;
+    text-justify: inter-word;
+    text-align-last: center;
+}
+.adventure {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+    font-size: 52px;
+    text-decoration: underline 2px;
+    margin: 0px;
+    font-family: 'Luxurious Script', cursive;
 }
 .image-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 25px;
     flex: 1;
     flex-wrap: wrap;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .image-block {
@@ -172,4 +207,77 @@ a:active {
     box-sizing: border-box;
     border-radius: 5%;
     box-shadow: 1px 1px 6px #0a1301;
+}
+
+.third-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    color: #1F2937;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 200;
+    gap: 25px;
+    padding: 50px 50px;
+}
+
+.third-row p {
+    padding: 0;
+    margin: 0;
+}
+
+.fourth-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9FAF8;
+}
+
+.four-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D430D;
+    margin: 50px;
+    padding: 25px;
+    transition: 0.1s;
+}
+.four-div:hover {
+    box-shadow: 1px 1px 8px #0a1301;
+}
+.news-copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    gap: 10px;
+    color: #F9FAF8;
+}
+.news-copy p, h4 {
+    margin: 0;
+}
+
+.sign-button {
+    margin-left: 75px;
+    font-size: 24px;
+    color: #F9FAF8;
+    padding: 5px 10px;
+    border: 2px solid #F9FAF8;
+    background-color: #3882F6;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.sign-button:hover {
+    color: #3882F6;
+    background-color: #F9FAF8;
+}
+
+.footer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 5px 25px;
 }
