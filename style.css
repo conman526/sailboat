@@ -2,30 +2,32 @@ body {
     background-color: #1F2937;
     font-family: 'Roboto', sans-serif;
     color: #F9FAF8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 0.2fr 1fr 0.3fr 0.2fr 0.2fr;
+    grid-template-areas: 
+    "header header header header"
+    "heroText heroText heroImage heroImage"
+    "adventure adventure adventure adventure"
+    "content1 content2 content3 content4"
+    "quote quote quote quote"
+    "newsLetter newsLetter newsLetter newsLetter"
+    "footer footer footer footer"
+    ;
+    grid-gap: 1rem;
 }
 
-.photo {
-    background-image: url(./Images/Juniper-cover.jpg);
-    background-repeat: repeat;
-    background-attachment: fixed;
-    max-height: 100vh;
-    background-size: cover;
-    flex-shrink: 1;
-    flex-basis: content;
-}
-
-.header {
+header {
     background-color: #1F2937;
     font-family: 'Luxurious Script', cursive;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 0px 50px 0px;
-    padding: 25px 100px 50px 100px;
+    margin: 0em;
+    padding: 1% 5% 2.5% 5%;
     flex-wrap: wrap;
+    grid-area: header;
 }
 
 ul {
@@ -33,7 +35,6 @@ ul {
     padding: 0;
 }
 li {
-    margin: 20px 20px 20px 20px;
     list-style: none;
 }
 a:link {
@@ -53,23 +54,18 @@ a:active {
     color: #F9FAF8;
 }
 
-.jun-back {
-    background-color: #0D430D;
-    height: 100px;
-    width: 200px;
-    border: 5px solid #F9FAF8;
-    border-radius: 50%;
-    box-shadow: 1px 1px 8px #0a1301;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .head-name {
     color: #E8DA58;
     font-size: 62px;
     font-weight: 900;
-    padding-bottom: 10px;
+    padding-top: 0.1em;
+    background-color: #0D430D;
+    height: 1.5em;
+    width: 3em;
+    border: 0.2rem solid #F9FAF8;
+    border-radius: 50%;
+    text-align: center;
+    text-justify: center;
 }
 
 .head-ul {
@@ -78,8 +74,24 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 2em;
     flex-wrap: wrap;
+}
+
+.heroImage {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    width: 100%;
+    flex-shrink: 1;
+    flex-basis: content;
+    grid-area: heroImage;
+}
+
+#boatImage {
+    width: 50vw;
+    max-width: 50vw;
+    max-height: 100vh;
 }
 
 .first-row {
@@ -87,80 +99,56 @@ a:active {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 200px 100px 300px 100px;
-    
+    margin: 0;
+    padding: 25% 5% 25% 5%;
+    background-image: url(./Images/Juniper-cover.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw;
+    flex-shrink: 1;
+    flex-basis: content;
 }
 
-.dream {
+.heroText {
     padding: 0;
     flex-shrink: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
-    background-color: rgba(31, 41, 55, 0.8);
-    border-radius: 15px;
+    justify-content: center;
+    padding: 5%;
+    grid-area: heroText;
 }
 
-.dream h2 {
-    margin: 0px;
+.heroText h2 {
+    margin: 0;
     text-align: center;
 }
-.dream p {
-    margin: 10px;
-    max-width: 300px;
+.heroText p {
+    margin: 1em;
+    max-width: 22em;
     text-align: center;
 }
-.dream button {
+.heroText button {
     padding-bottom: 1px;
-    min-width: 75px;
-    min-height: 30px;
+    min-width: 4.6875em;
+    min-height: 1.875em;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    padding: 5px 10px;
+    padding: 0.3125em 0.625em;
     background-color: #3882F6;
     color: #F9FAF8;
-    border: 2px solid #F9FAF8;
-    border-radius: 5px;
+    border: 0.125em solid #F9FAF8;
+    border-radius: 0.3em;
     transition: 0.3s;
 }
 
-.dream button:hover {
+.heroText button:hover {
     background-color: #F9FAF8;
     color: #3882F6;
     }
 
-.cover-photo {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    flex: 1;
-    margin-left: 50px;
-}
-#juniper-photo {
-    width: auto;
-    height: auto;
-    max-width: 100vh;
-    border: 3px solid #F9FAF8;
-    border-radius: 5%;
-    box-shadow: 1px 1px 6px #0a1301;
-}
-
-.second-row {
-    background-color: #F9FAF8;
-    color: #1F2937;
-    box-shadow: 2px 2px 8px #0a1301;
-    margin: 0px;
-    background: linear-gradient(180deg, #b2d8de 0%, #f9faf8 50%, #b2d8de 100%);
-}
-
-.adventure h3 {
-    margin: 25px;
-    text-align: center;
-    text-justify: inter-word;
-    text-align-last: center;
-}
 .adventure {
     display: flex;
     justify-content: center;
@@ -169,18 +157,11 @@ a:active {
     text-decoration: underline 2px;
     margin: 0px;
     font-family: 'Luxurious Script', cursive;
-}
-.image-row {
-    display: flex;
-    justify-content: space-around;
-    gap: 25px;
-    flex: 1;
-    flex-wrap: wrap;
-    margin-left: 100px;
-    margin-right: 100px;
+    grid-area: adventure;
 }
 
-.image-block {
+
+.content1, .content2, .content3, .content4 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,11 +172,24 @@ a:active {
     font-weight: 425;
     max-width: 250px;
 }
+.content1 {
+    grid-area: content1;
+}
+.content2 {
+    grid-area: content2;
+}
+.content3 {
+    grid-area: content3;
+}
+.content4 {
+    grid-area: content4;
+}
 
-.image-block p {
+.contentText {
     text-align: center;
     max-width: 250px;
     min-height: 100px;
+    color: #F9FAF8;
 }
 
 #connor-happy, #mr-skeen, #on-the-move, #friends {
@@ -209,7 +203,7 @@ a:active {
     box-shadow: 1px 1px 6px #0a1301;
 }
 
-.third-row {
+.quote {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,18 +215,20 @@ a:active {
     font-weight: 200;
     gap: 25px;
     padding: 50px 50px;
+    grid-area: quote;
 }
 
-.third-row p {
+.quote p {
     padding: 0;
     margin: 0;
 }
 
-.fourth-row {
+.newsLetter {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F9FAF8;
+    grid-area: newsLetter;
 }
 
 .four-div {
@@ -275,9 +271,10 @@ a:active {
     background-color: #F9FAF8;
 }
 
-.footer {
+footer {
     display: flex;
     justify-content: left;
     align-items: center;
     margin: 5px 25px;
+    grid-area: footer;
 }
